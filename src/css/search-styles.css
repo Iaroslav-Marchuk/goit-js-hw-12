@@ -1,0 +1,153 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: 36px auto 32px;
+}
+
+.form-input {
+  outline: none;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  color: #808080;
+}
+
+.form-input:hover {
+  border-color: #000;
+}
+
+.form-input:focus {
+  border-color: #4e75ff;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  max-width: 125px;
+  height: 40px;
+  border-color: transparent;
+  background: #4e75ff;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.btn:hover,
+.load-btn:hover {
+  background: #6c8cff;
+}
+
+.load-btn {
+  margin: 32px auto;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  max-width: 125px;
+  height: 40px;
+  border-color: transparent;
+  background: #4e75ff;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1128px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.gallery-item {
+  box-sizing: border-box;
+  width: calc((100% - 48px) / 3);
+  height: 200px;
+  border: 1px solid #808080;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 360px;
+  max-height: 152px;
+  object-fit: cover;
+}
+
+.gallery-span-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.gallery-span-wrapper-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.span-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.span-value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 32px auto;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #668ccd transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
